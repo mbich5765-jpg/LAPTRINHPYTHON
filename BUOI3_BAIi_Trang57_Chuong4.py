@@ -6,10 +6,7 @@ print(f"Năm hiện tại: {now.strftime('%Y')}")
 print(f"Tháng hiện tại bằng chữ: {now.strftime('%B')}")
 print(f"Tuần hiện tại là tuần thứ mấy trong năm: {now.strftime('%W')}")
 
-first_day_of_month = now.replace(day=1)
-first_week_of_year = int(first_day_of_month.strftime('%W'))
-current_week_of_year = int(now.strftime('%W'))
-week_of_month = current_week_of_year - first_week_of_year + 1
+week_of_month = (now.day - 1) // 7 + 1
 print(f"Tuần hiện tại là tuần thứ mấy trong tháng: {week_of_month}")
 
 print(f"Ngày hiện tại là ngày thứ mấy trong năm: {now.strftime('%j')}")
