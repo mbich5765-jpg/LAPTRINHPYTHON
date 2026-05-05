@@ -50,14 +50,10 @@ def main():
     print(f"c) Số lớn nhất trong list: {max(L)}")
     print(f"   Số nhỏ nhất trong list: {min(L)}")
 
-    # d) Cho biết các số trong list có được sắp xếp tăng dần hay chưa?
-    L_sorted = L.copy()
-    L_sorted.sort()
-
-    if L == L_sorted:
-        print("d) Các số trong list ĐÃ được sắp xếp tăng dần.")
-    else:
-        print("d) Các số trong list CHƯA được sắp xếp tăng dần.")
+    # d) Cho biết các số trong list có được sắp xếp tăng dần hay chưa? 
+    kiem_tra_sap_xep = lambda lst: "d) Các số trong list ĐÃ được sắp xếp tăng dần." if lst == sorted(lst) else "d) Các số trong list CHƯA được sắp xếp tăng dần."
+    
+    print(kiem_tra_sap_xep(L))
 
 if __name__ == "__main__":
     main()
